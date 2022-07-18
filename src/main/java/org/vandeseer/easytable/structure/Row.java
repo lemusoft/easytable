@@ -81,7 +81,16 @@ public class Row {
             cells.add(cell);
             return this;
         }
-
+    
+        public RowBuilder addAll(final List<AbstractCell> prmtCells) {
+            
+            for (AbstractCell celdaX : prmtCells) {
+                //cells.add(celdaX);
+                RowBuilder.this.add(celdaX);
+            }
+            return this;
+        }
+        
         public Row.RowBuilder font(final PDFont font) {
             settings.setFont(font);
             return this;
